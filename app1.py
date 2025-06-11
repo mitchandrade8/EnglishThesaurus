@@ -22,5 +22,10 @@ word = input("Enter word: ")
 
 output = translate(word)
 
-for item in output:
-    print(item)
+# conditional check before for loop
+# handle either a list or simply print out the string 
+if type(output) == list:
+    for item in output:
+        print(item)
+else:
+    print(output) # when the output is a string
