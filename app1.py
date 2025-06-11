@@ -8,7 +8,7 @@ def translate(word):
     if word in data:
         return data[word]
     elif len(get_close_matches(word, data.keys())) > 0:
-        return "Did you mean %s instead?" %get_close_matches(word, data.keys())[0]
+        return input("Did you mean %s instead? Enter Y if yes, or N if no." %get_close_matches(word, data.keys())[0])
     else:
         return "The word you entered does not exist. Please double check it."
 
